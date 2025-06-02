@@ -11,7 +11,7 @@ app.use(cors({
 
 
 app.get('/version', (req, res) => {
-  const filePath = path.join(__dirname, 'backend', 'version.json');
+  const filePath = path.join(__dirname, 'version.json');
 
   const data = fs.readFileSync(filePath, 'utf8');
   res.setHeader('Content-Type', 'application/json');
