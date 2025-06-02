@@ -4,7 +4,10 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET']
+}));
 
 app.get('/version', (req, res) => {
   const filePath = path.join(__dirname, 'version.json');
