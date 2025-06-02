@@ -5,7 +5,8 @@ let currentVersion = "1.0.0"; // локальна версія (наприкла
 
 async function checkVersion() {
   try {
-    const res = await fetch('https://your-backend-url.onrender.com/version');
+    const res = await fetch('https://shiftimecrm-version-check.onrender.com/version');
+
     const data = await res.json();
     const latestVersion = data.version;
 
