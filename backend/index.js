@@ -5,9 +5,11 @@ const fs = require('fs');
 const path = require('path');
 
 app.use(cors({
-  origin: '*',
-  methods: ['GET']
+  origin: 'https://lustrous-banoffee-821d31.netlify.app',
+  methods: ['GET'],
+  allowedHeaders: ['Content-Type']
 }));
+
 
 app.get('/version', (req, res) => {
   const filePath = path.join(__dirname, 'version.json');
