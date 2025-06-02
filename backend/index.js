@@ -4,11 +4,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
-app.use(cors({
-  origin: 'https://lustrous-banoffee-821d31.netlify.app',
-  methods: ['GET'],
-  allowedHeaders: ['Content-Type']
-}));
+app.use(cors()); // дозвіл з будь-якого джерела
 
 
 app.get('/version', (req, res) => {
