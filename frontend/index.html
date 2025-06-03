@@ -4,15 +4,43 @@
   <meta charset="UTF-8">
   <title>Перевірка версії</title>
   <style>
-    #version { font-size: 24px; }
-    .new { color: red; }
-    button:disabled { opacity: 0.5; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    #version {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    #version.new {
+      color: red;
+    }
+    #updateBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #updateBtn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
-  <h2>Версія:</h2>
+
+  <h1>Версія:</h1>
   <p id="version">Завантаження...</p>
-  <button id="updateBtn" disabled>Оновити</button>
+  <button id="updateBtn" disabled style="display: none;">🔄 Оновити</button>
 
   <script src="script.js"></script>
 </body>
